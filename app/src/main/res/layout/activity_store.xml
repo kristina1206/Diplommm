@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#22756E"
+    tools:context=".StoreActivity">
+
+    <Button
+        android:id="@+id/btnOrderBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="Menu"
+        android:text="Menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnFindOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="Find"
+        android:text="Find"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnOrderPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="Post"
+        android:text="Post"
+        app:layout_constraintEnd_toEndOf="@+id/swOrder"
+        app:layout_constraintStart_toStartOf="@+id/swOrder"
+        app:layout_constraintTop_toBottomOf="@+id/swOrder" />
+
+    <Switch
+        android:id="@+id/swOrder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Confirmed"
+        app:layout_constraintEnd_toEndOf="@+id/edOrderStatusPost"
+        app:layout_constraintStart_toStartOf="@+id/edOrderStatusPost"
+        app:layout_constraintTop_toBottomOf="@+id/edOrderStatusPost" />
+
+    <EditText
+        android:id="@+id/edOrderPostId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="164dp"
+        android:ems="10"
+        android:hint="Enter orderId"
+        android:inputType="number"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edOrderPedId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter Ped Id"
+        android:inputType="number"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/edOrderPostId"
+        app:layout_constraintStart_toStartOf="@+id/edOrderPostId"
+        app:layout_constraintTop_toBottomOf="@+id/edOrderPostId" />
+
+    <EditText
+        android:id="@+id/edOrderQuantityPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter Quantity"
+        android:inputType="number"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/edOrderPedId"
+        app:layout_constraintStart_toStartOf="@+id/edOrderPedId"
+        app:layout_constraintTop_toBottomOf="@+id/edOrderPedId" />
+
+    <EditText
+        android:id="@+id/edOrderShipDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter ShipDate"
+        android:inputType="text"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/edOrderQuantityPost"
+        app:layout_constraintStart_toStartOf="@+id/edOrderQuantityPost"
+        app:layout_constraintTop_toBottomOf="@+id/edOrderQuantityPost" />
+
+    <EditText
+        android:id="@+id/edOrderStatusPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter Status  post"
+        android:inputType="text"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/edOrderShipDate"
+        app:layout_constraintStart_toStartOf="@+id/edOrderShipDate"
+        app:layout_constraintTop_toBottomOf="@+id/edOrderShipDate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
